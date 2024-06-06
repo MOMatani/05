@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Update flights</title>
+<link rel="stylesheet" href="css/updateflights.css">
+<link rel="icon" href="css/img/tour-icon.png">
+</head>
+<body>
+  <table>
+    <thead>
+      <tr>
+        <th>Flight No.</th>
+        <th>Departure Airport</th>
+        <th>Arrival Airport</th>
+        <th>Airline</th>
+        <th>Departure Time</th>
+        <th>Arrival Time</th>
+        <th>Actions</th>
+      </tr>
+    </thead>
+
+    
+ <tbody>
+      <% if (updateflights && updateflights.length > 0) { %>
+        <% updateflights.forEach(flight => { %>
+          <tr>
+            <td><%= flight.airline_company_id %></td>
+            <td><%= flight.origin_country_id %></td>
+            <td><%= flight.flight_number %></td>
+            <td><%= flight.airline %></td>
+            <td><%= flight.arrival_time %></td>
+            <td><%= flight.departure_time %></td>
+            <td>
+              <button onclick="updateFlight('<%= flight.airline_company_id %>')">Update</button>
+              <button onclick="deleteFlight('<%= flight.airline_company_id %>')">Delete</button>
+              
+            </td>
+          </tr>
+        <% }); %>
+      <% } else { %>
+        <tr>
+          <td colspan="4">No flights available</td>
+        </tr>
+      <% } %>
+    </tbody>
+  </table>
+  
+
+  
+
+  <h3> Update data Flight  </h3>
+  <form action="/updateadmin" method="get">
+    <button class="button-78" type="submit">Update Flights</button>
+</form>
+
+<form action="/updateflights/<%= updateflights.id %>" method="POST">
+  <label for="airline">Airline:</label>
+  <input type="text" id="airline" name="airline" value="<%= updateflights.airline %>"><br><br>
+
+  <label for="origin">Origin:</label>
+  <input type="text" id="origin" name="origin" value="<%= updateflights.origin %>"><br><br>
+
+  <label for="destination_country_id">Destination Country ID:</label>
+  <input type="text" id="destination_country_id" name="destination_country_id" value="<%= updateflights.destination_country_id %>"><br><br>
+
+  <label for="departureTime">Departure Time:</label>
+  <input type="text" id="departureTime" name="departureTime" value="<%= updateflights.departureTime %>"><br><br>
+
+  <label for="landing_time">Landing Time:</label>
+  <input type="text" id="landing_time" name="landing_time" value="<%= updateflights.landing_time %>"><br><br>
+
+  <input type="submit" value="Update Flight">
+</form>
+
+<h3>Add flights</h3>
+
+<form action="/updateflights" method="POST">
+  <label for="airline_company_id">Airline Company ID:</label>
+  <input type="text" id="airline_company_id" name="airline_company_id" required><br><br>
+
+  <label for="origin_country_id">Origin Country ID:</label>
+  <input type="text" id="origin_country_id" name="origin_country_id" required><br><br>
+
+  <label for="destination_country_id">Destination Country ID:</label>
+  <input type="text" id="destination_country_id" name="destination_country_id" required><br><br>
+
+  <label for="departure_Time">Departure Time:</label>
+  <input type="text" id="departure_Time" name="departure_Time" required><br><br>
+
+  <label for="landing_time">Landing Time:</label>
+  <input type="text" id="landing_time" name="landing_time" required><br><br>
+
+  <label for="remaining_tickets">Remaining Tickets:</label>
+  <input type="text" id="remaining_tickets" name="remaining_tickets" required><br><br>
+
+  <input type="submit" value="Add Flight">
+</form>
+</body>
+</html>

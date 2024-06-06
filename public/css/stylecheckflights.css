@@ -1,0 +1,133 @@
+.form-group {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+  }
+  
+  label {
+    width: 100px;
+    text-align: right;
+    margin-right: 5px;
+    margin-left: 5px;
+  }
+
+  .sublabel {
+    color:gray; 
+    margin:4px; 
+    font-size: 11px;
+  }
+  
+  input[type="text"],
+  input[type="date"] {
+    padding: 10px;
+    font-size: 14px;
+  }
+
+  button[type="submit"] {
+    padding: 10px 20px;
+    background-color: #0050A0;
+    border: none;
+    cursor: pointer;
+  }
+  
+  input[type="date"] {
+    position: relative;
+  }
+  
+  input[type="date"]:before {
+    content: attr(placeholder);
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: #fff;
+    color: rgba(0, 0, 0, 0.65);
+    pointer-events: none;
+    line-height: 1.5;
+    padding: 10px 0.5rem 0 0.5rem;
+  }
+  
+  input[type="date"]:focus:before,
+  input[type="date"]:not([value=""]):before
+  {
+    display: none;
+  }
+
+  .custom-bg {
+    background-color: #F7F7F9;
+  }
+  header {
+    color: #fff;
+    padding: 1em;
+    text-align: right;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 100;
+  }
+  
+  header ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: flex-end;
+    font-size: 30px;
+  }
+  
+  header li {
+    margin-left: 20px;
+  }
+  
+  header a {
+    color: #ff0000;
+    text-decoration: none;
+  }
+  
+  header a:hover {
+    color: #ccc;
+  }
+  .container {
+            max-width: 800px;
+            margin: 20px auto;
+            background-color: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .container h2 {
+            text-align: center;
+            color: #007bff;
+        }
+
+        .container ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .container ul li {
+            background-color: #f9f9f9;
+            border: 1px solid #ddd;
+            margin-bottom: 10px;
+            padding: 15px;
+            border-radius: 8px;
+        }
+
+        .container ul li p {
+            margin: 5px 0;
+            font-size: 16px;
+        }
+
+        .container ul li p span {
+            font-weight: bold;
+        }
+
+        .error, .no-results {
+            text-align: center;
+            color: #ff0000;
+            font-size: 18px;
+            font-weight: bold;
+        }

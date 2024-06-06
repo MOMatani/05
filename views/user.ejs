@@ -1,0 +1,50 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Tickets</title>
+</head>
+<body>
+    <h1>User Tickets</h1>
+
+    <% if (tickets && tickets.length > 0) { %>
+        <ul>
+            <% tickets.forEach(ticket => { %>
+                <li>
+                    <p>Ticket ID: <%= ticket.id %></p>
+                    <p>Flight ID: <%= ticket.flight_id %></p>
+                    <p>Seat Number: <%= ticket.seat_number %></p>
+                    
+                </li>
+            <% }); %>
+        </ul>
+    <% } else { %>
+        <p>No tickets found for this user.</p>
+    <% } %>
+
+    <% if (error) { %>
+        <p>Error: <%= error %></p>
+    <% } %>
+
+    <form action="/user" method="POST">
+        <input type="hidden" name="customerId" value="<%= customer.id %>">
+        <label for="first_name">First Name:</label>
+        <input type="text" id="first_name" name="first_name" value="<%= customer.first_name %>"><br>
+        <label for="last_name">Last Name:</label>
+        <input type="text" id="last_name" name="last_name" value="<%= customer.last_name %>"><br>
+        <label for="phone_no">Phone Number:</label>
+        <input type="text" id="phone_no" name="phone_no" value="<%= customer.phone_no %>"><br>
+        <label for="address">Address:</label>
+        <input type="text" id="address" name="address" value="<%= customer.address %>"><br>
+        <label for="username">Username:</label>
+        <input type="text" id="user_name" name="user_name" value="<%= customer.user_name %>"><br>
+        <label for="password">Password:</label>
+        <input type="password" id="password" name="password"><br>
+        <button type="submit">Update Details</button>
+    </form>
+
+</body>
+</html>

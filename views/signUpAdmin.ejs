@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sing Up administrators</title>
+    <link rel="icon" href="css/img/tour-icon.png">
+    <link rel="stylesheet" href="css/StyleSignUp.css">
+</head>
+<body>
+    <script>
+        function redirectToLogin() {
+          window.location.href = '/admin';
+        }
+      </script>
+    <header>
+        <ul>
+          <li><a href="/">Home</a></li>
+          <li><a href="/flightsS">Flights</a></li>
+          <li><a href="/contact">Contact</a></li>
+          <li><a href="/login">Login</a></li>
+        </ul>
+      </header>
+    <h1>Sign Up Administrators</h1>
+    
+    <div class="container">
+        <label for="uname"><b>Username</b></label>
+        <input type="text" placeholder="Enter Username" name="uname" required>
+
+        <label for="Eamil"><b>id</b></label>
+        <input type="number" placeholder="Enter id" name="id" required>
+
+        <label for="firname"><b>first name </b></label>
+        <input type="text" placeholder="Enter First Nmae" name= "firname" required>
+
+        <label for="lastname"><b>last name </b></label>
+        <input type="text" placeholder="Enter last name" name= "lastname" required>
+
+        <label for="psw"><b>Password</b></label>
+        <input type="password" placeholder="Enter Password" name="psw" required>
+    
+        <button type="button" onclick="redirectToLogin()">Login</button>
+        <label>
+          <input type="checkbox" checked="checked" name="remember"> Remember me
+        </label>
+      </div>
+    
+      <div class="container" style="background-color:#f1f1f1">
+        <button type="button" class="cancelbtn">Cancel</button>
+        <span class="psw">Forgot <a href="#">password?</a></span>
+      </div>
+    </form>
+</body>
+</html>

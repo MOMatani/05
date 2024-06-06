@@ -1,0 +1,145 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+}
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'poppins';
+
+}
+.conttanir{
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0 , 4);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.background-clip{
+    position: absolute;
+    right:0;
+    bottom: 0;
+    z-index: -1;
+
+}
+@media (min-aspect-ratio:16/9) {
+    .background-clip{
+        width:100% ;
+        height: auto;
+    }
+    
+}
+@media (max-aspect-ratio:16/9){
+    .background-clip{
+        width: auto;
+        height: 100%;
+    }
+}
+header {
+    
+    color: rgba(12, 178, 255, 0.217);
+    padding: 1em;
+    text-align: right;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 100;
+  }
+  
+  header ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: flex-end;
+   
+  font-size: 30px;
+  }
+  
+  header li {
+    margin-left: 20px;
+  }
+  
+  header a {
+    color: rgb(61, 7, 255);
+    text-decoration: none;
+  }
+  
+  header a:hover {
+    color: blue;
+    
+  }
+    /* styles.css */
+
+body {
+  font-family: Arial, sans-serif;
+  margin: 20px;
+}
+
+.contact-container {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 20px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  background-color: rgba(0,0,0,0.5);
+}
+
+h1, h2 {
+  color: #c80000;
+}
+
+p {
+  font-size: 16px;
+}
+
+p a {
+  text-decoration: none;
+  color: #4CAF50;
+  font-size: 18px;
+}
+
+p a:hover {
+  text-decoration: underline;
+}
+
+.social-links {
+  list-style-type: none;
+  padding: 0;
+}
+
+.social-links li {
+  margin: 10px 0;
+}
+
+.social-links a {
+  text-decoration: none;
+  color: #4CAF50;
+  font-size: 18px;
+  display: flex;
+  align-items: center;
+}
+
+.social-links i {
+  margin-right: 10px;
+}
+
+.social-links a:hover {
+  text-decoration: underline;
+}
+.pro{
+
+  margin: 0 auto;
+  border-radius: 8px;
+  color: #ff0000;
+ 
+}
+.pro h1 {
+  color: rgb(0, 0, 0);
+  margin-left: 40%;
+}

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <link rel="icon" href="css/img/tour-icon.png">
+  <meta charset="UTF-8">
+  <link rel="stylesheet" type="text/css" href="/css/style.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>flight project - home</title>
+
+</head>
+<body>
+
+  <div class="icon">
+    <img src="css/img/tour-icon.png" alt="header">
+
+    <div class="container">
+      <video autoplay loop muted playsinline class="background-clip">
+        <source src="css/img/mp4.mp4" type="video/mp4"> 
+      </video>
+
+      <div class="content">
+        <h1>Welcome</h1>
+       
+      </div>
+    </div>
+  </div>
+
+  <header>
+    <ul>
+      <li><a href="/">Home</a></li>
+      <li><a href="/flightsS">Flights</a></li>
+      <li><a href="/contact">Contact</a></li>
+      <li><a href="/login">Login</a></li>
+      <li><a href="/signUpAdmin">Admin Sign up</a></li>
+    </ul>
+  </header>
+
+ 
+
+
+
+ 
+  <button class="secondary" style="--c:#E95A49" onclick="navigate('/checkflight')">Check Flight</button>
+
+  <script>
+      function navigate(url) {
+          window.location.href = url;
+      }
+  </script>
+  
+
+  <!-- Display welcome message -->
+</body>
+</html>

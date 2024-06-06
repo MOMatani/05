@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>flight project - flights</title>
+    <link rel="stylesheet" href="css/styleFlight.css">
+    <link rel="icon" href="css/img/tour-icon.png">
+
+<body>
+    
+  <div class="icon">
+    <img src="css/img/tour-icon.png" alt="header">
+
+    <div class="conttanir">
+        <video autoplay loop muted playsinline class="background-clip">
+          <source src="css/img/8044775-hd_1920_1080_25fps.mp4" type="video/mp4">
+          </div>
+
+          <header>
+            <ul>
+              <li><a href="/">Home</a></li>
+              <li><a href="/flightsS">Flights</a></li>
+              <li><a href="/contact">Contact</a></li>
+              <li><a href="/login">Login</a></li>
+            </ul>
+          </header>
+
+
+          <form action="/updateflights.ejs" method="get">
+            <button class="button-78" type="submit">Update Flights</button>
+        </form>
+
+
+
+          <table>
+            <thead>
+              <tr>
+                <th>Departs</th>
+                <th>Destination</th>
+                <th>Flight No</th>
+                <th>Airline</th>
+              </tr>
+            </thead>
+            <tbody>
+              <% if (flightsS && flightsS.length > 0) { %>
+                <% flightsS.forEach(flight => { %>
+                  <tr>
+                    <td><%= flight.departs %></td>
+                    <td><%= flight.destination %></td>
+                    <td><%= flight.flight_number %></td>
+                    <td><%= flight.airline %></td>
+                  </tr>
+                <% }); %>
+              <% } else { %>
+                <tr>
+                  <td colspan="4">No flights available</td>
+                </tr>
+              <% } %>
+            </tbody>
+          </table>
+          
+</body>
+</html>3
